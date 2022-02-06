@@ -1,5 +1,6 @@
 package com.example.animationsapp
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.animation.AnimationUtils
@@ -28,6 +29,8 @@ class MainActivity : AppCompatActivity() {
         val btn_bounce: Button = findViewById(R.id.btn_bounce)
         val btn_sequential: Button = findViewById(R.id.btn_sequential)
         val btn_together: Button = findViewById(R.id.btn_together)
+
+        val btn_lotties: Button = findViewById(R.id.btn_lotties)
 
         btn_zoom.setOnClickListener {
             val animation = AnimationUtils.loadAnimation(applicationContext, R.anim.zoom)
@@ -66,5 +69,9 @@ class MainActivity : AppCompatActivity() {
             iv_image.startAnimation(animation)
         }
 
+        btn_lotties.setOnClickListener {
+            val intent = Intent(this, LottiesActivity::class.java)
+            startActivity(intent)
+        }
     }
 }

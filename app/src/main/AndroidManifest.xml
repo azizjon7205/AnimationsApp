@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AnimationsApp">
         <activity
+            android:name=".LottiesActivity"
+            android:exported="false" />
+        <activity
             android:name=".IntroSliderActivity"
             android:exported="false" />
         <activity
